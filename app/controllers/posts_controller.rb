@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def edit
   end
 
-  def create
+  def update
     # Create a brand new, unsaved, not-yet-validated Post object from the form.
     @post = Post.update(post_params)
 
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
       # If the post is invalid, hold on to @post, because it is now full of
       # useful error messages, and re-render the :new page, which knows how
       # to display them alongside the user's entries.
-      render :show
+      render :update
     end
   end
 
