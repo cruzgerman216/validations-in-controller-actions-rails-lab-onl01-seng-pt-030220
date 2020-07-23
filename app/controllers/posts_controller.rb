@@ -13,7 +13,7 @@ class PostsController < ApplicationController
 
     # Run the validations WITHOUT attempting to save to the database, returning
     # true if the Post is valid, and false if it's not.
-    if @post
+    if @post.valid?
       # If--and only if--the post is valid, do what we usually do.
       # This returns a status_code of 302, which instructs the browser to
       # perform a NEW REQUEST! (AKA: throw @post away and let the show action
