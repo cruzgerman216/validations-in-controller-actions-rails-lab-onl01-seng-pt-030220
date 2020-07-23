@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def update
     # Create a brand new, unsaved, not-yet-validated Post object from the form.
-    @post = Post.update(post_params)
+    @post.update(post_params)
 
     # Run the validations WITHOUT attempting to save to the database, returning
     # true if the Post is valid, and false if it's not.
